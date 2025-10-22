@@ -1,5 +1,7 @@
 @use './map.scss';
-@use './property/properfyGallery';
+@use './property/propertyGallery';
+@use './property/propertyPopup';
+
 
 // 🎨 Variables y estilos base
 $primary-color: #2563eb;

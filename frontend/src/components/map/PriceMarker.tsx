@@ -45,7 +45,7 @@ export default function PriceMarker({ property }: PriceMarkerProps) {
                 className="object-cover rounded"
               />
             </div>
-            <div className="space-y-1">
+            <div className="property-popup-info space-y-1">
               <h3 className="font-semibold text-lg">{property.name}</h3>
               <p className="text-gray-600 text-sm">{property.address}</p>
               <p className="text-xl font-bold text-blue-600">

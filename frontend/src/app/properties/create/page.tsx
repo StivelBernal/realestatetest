@@ -9,8 +9,8 @@ import { CreatePropertyFormData } from '@/types/property';
 import { useLoader } from './../../../contexts';
 
 
-const latRegex = /^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-8]?\d(?:\.\d{1,6})?))$/;
-const lngRegex = /^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:1?[0-7]?\d(?:\.\d{1,6})?))$/;
+const latRegex = /^(\+|-)?(?:90(?:[.,]\d+)?|[0-8]?\d(?:[.,]\d+)?)$/;
+const lngRegex = /^(\+|-)?(?:180(?:[.,]\d+)?|1?[0-7]?\d(?:[.,]\d+)?)$/;
 
 
 /**
@@ -38,7 +38,7 @@ export default function CreatePropertyPage() {
     formState: { errors }
   } = useForm<CreatePropertyFormData>({
     defaultValues: {
-      idOwner: '',
+      idOwner: 'OWN202510223892', // ID de propietario quemado para demo pero deberia traerse del usuario logueado
       name: '',
       address: '',
       price: 0,
@@ -53,7 +53,8 @@ export default function CreatePropertyPage() {
 
     try {
       // Crear la propiedad básica
-      const newProperty = await propertyService.create(data);
+      const { address, idOwner, lat, lng, name, price } = data;
+      const newProperty = await propertyService.create({ address, idOwner, lat, lng, name, price });
 
       // Subir imagen de portada si existe
       if (data.image && data.image.length > 0) {
@@ -158,7 +159,7 @@ export default function CreatePropertyPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Input
-                  type="number"
+                  type="text"
                   step="any"
                   label="Latitud *"
                   placeholder="Ej: 4.570868"
@@ -173,7 +174,7 @@ export default function CreatePropertyPage() {
                 />
 
                 <Input
-                  type="number"
+                  type="text"
                   step="any"
                   label="Longitud *"
                   placeholder="Ej: -74.297333"
