@@ -16,7 +16,11 @@ namespace RealEstate.Api.Services
         {
             var client = new MongoClient(config["MongoDbSettings:ConnectionString"]);
             var database = client.GetDatabase(config["MongoDbSettings:DatabaseName"]);
-            _collection = database.GetCollection<Property>(config["MongoDbSettings:CollectionName"]);
+            
+            // Usar nombre de colección por defecto si no está configurado
+            var collectionName = config["MongoDbSettings:CollectionName"] ?? "properties";
+            _collection = database.GetCollection<Property>(collectionName);
+            
             _s3Service = s3Service;
             _ownerService = ownerService;
             _propertyTraceService = propertyTraceService;
