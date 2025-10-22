@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "303359ba-fcc1-4fc6-83be-66c68aca1a77",
+		"name": "RealEstateProd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9200614"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://realestatetest-production.up.railway.app/api/properties"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/properties Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/properties"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 04:21:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"68f705450f083623b4ed7d88\",\n        \"idOwner\": \"OWN202510218857\",\n        \"name\": \"Casa Moderna en Chapinero\",\n        \"address\": \"Calle 63 #11-45, Chapinero, Bogotá\",\n        \"price\": 850000000,\n        \"image\": \"https://realestate-properties-brayan.s3.amazonaws.com/9c7d646b-2392-45ef-a01b-374c5d31f80a_eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlZC1hM2E5LTczMGUtOTg3My1hZDg4MmFiNzAxZGYucG5nIiwiYnJhbmQiOiJ0cm92.webp\",\n        \"images\": [\n            \"https://realestate-properties-brayan.s3.amazonaws.com/b8a32a86-2812-443a-afd8-a0688a278116_gallery_1752890762-653.jpg\",\n            \"https://realestate-properties-brayan.s3.amazonaws.com/57a6bd32-4aab-4955-bf33-cda8df4d555b_eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlMS1iY2VmLTcyZTUtOTE3Yy0wMTNiMTk2MzYxZTYuanBnIiwiYnJhbmQiOiJ0cm92.webp\"\n        ],\n        \"lat\": 4.6551,\n        \"lng\": -74.0709\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://realestatetest-production.up.railway.app/api/properties/68f842e01908eb5c34c05742/detail"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/properties Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/properties"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 04:21:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"68f705450f083623b4ed7d88\",\n        \"idOwner\": \"OWN202510218857\",\n        \"name\": \"Casa Moderna en Chapinero\",\n        \"address\": \"Calle 63 #11-45, Chapinero, Bogotá\",\n        \"price\": 850000000,\n        \"image\": \"https://realestate-properties-brayan.s3.amazonaws.com/9c7d646b-2392-45ef-a01b-374c5d31f80a_eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlZC1hM2E5LTczMGUtOTg3My1hZDg4MmFiNzAxZGYucG5nIiwiYnJhbmQiOiJ0cm92.webp\",\n        \"images\": [\n            \"https://realestate-properties-brayan.s3.amazonaws.com/b8a32a86-2812-443a-afd8-a0688a278116_gallery_1752890762-653.jpg\",\n            \"https://realestate-properties-brayan.s3.amazonaws.com/57a6bd32-4aab-4955-bf33-cda8df4d555b_eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlMS1iY2VmLTcyZTUtOTE3Yy0wMTNiMTk2MzYxZTYuanBnIiwiYnJhbmQiOiJ0cm92.webp\"\n        ],\n        \"lat\": 4.6551,\n        \"lng\": -74.0709\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "owners",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"email\": \"juan.perez@email.com\",\r\n  \"phone\": \"+57 300 123 4567\",\r\n  \"address\": \"Carrera 15 #85-32, Bogotá\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://realestatetest-production.up.railway.app/api/owners"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/properties Copy 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"email\": \"juan.perez@email.com\",\r\n  \"phone\": \"+57 300 123 4567\",\r\n  \"address\": \"Carrera 15 #85-32, Bogotá\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/owners"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 03:59:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Owners/68f7053f0f083623b4ed7d87"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"68f7053f0f083623b4ed7d87\",\n    \"idOwner\": \"OWN202510211082\",\n    \"name\": \"Juan Pérez\",\n    \"address\": \"Carrera 15 #85-32, Bogotá\",\n    \"photo\": \"\",\n    \"birthday\": \"0001-01-01T00:00:00\",\n    \"createdAt\": \"2025-10-21T03:59:59.2762988Z\",\n    \"updatedAt\": \"2025-10-21T03:59:59.2762988Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "createProperty",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idOwner\": \"OWN202510218857\",\r\n  \"name\": \"Casa Moderna en Chapinero\",\r\n  \"address\": \"Calle 63 #11-45, Chapinero, Bogotá\",\r\n  \"price\": 850000000,\r\n  \"lat\": 4.6551,\r\n  \"lng\": -74.0709\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://realestatetest-production.up.railway.app/api/properties"
+			},
+			"response": [
+				{
+					"name": "http://localhost:5000/api/properties Copy 3",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idOwner\": \"OWN202510218857\",\r\n  \"name\": \"Casa Moderna en Chapinero\",\r\n  \"address\": \"Calle 63 #11-45, Chapinero, Bogotá\",\r\n  \"price\": 850000000,\r\n  \"lat\": 4.6551,\r\n  \"lng\": -74.0709\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/properties"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Oct 2025 04:00:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Properties/68f705450f083623b4ed7d88"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"68f705450f083623b4ed7d88\",\n    \"idProperty\": \"PROP202510215821\",\n    \"name\": \"Casa Moderna en Chapinero\",\n    \"address\": \"Calle 63 #11-45, Chapinero, Bogotá\",\n    \"price\": 850000000,\n    \"codeInternal\": \"INT20251021728\",\n    \"year\": 2025,\n    \"idOwner\": \"OWN202510218857\",\n    \"image\": \"\",\n    \"location\": {\n        \"lat\": 4.6551,\n        \"lng\": -74.0709\n    },\n    \"images\": [],\n    \"createdAt\": \"2025-10-21T04:00:05.7090876Z\",\n    \"updatedAt\": \"2025-10-21T04:00:05.7091053Z\",\n    \"owner\": null,\n    \"propertyTraces\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "propertyCoverImage",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Brayan/Downloads/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlZC1hM2E5LTczMGUtOTg3My1hZDg4MmFiNzAxZGYucG5nIiwiYnJhbmQiOiJ0cm92.webp"
+						}
+					]
+				},
+				"url": "https://realestatetest-production.up.railway.app/api/properties/68f705450f083623b4ed7d88/cover"
+			},
+			"response": []
+		},
+		{
+			"name": "propertyGallery",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/Brayan/Downloads/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTgwZWQxLWQ5NzYtNzIyNS05Yzk2LWE5ODE1ODJhZjM2ZS8wMTk4MGVlZC1hM2E5LTczMGUtOTg3My1hZDg4MmFiNzAxZGYucG5nIiwiYnJhbmQiOiJ0cm92.webp"
+						}
+					]
+				},
+				"url": "https://realestatetest-production.up.railway.app/api/properties/68f705450f083623b4ed7d88/gallery"
+			},
+			"response": []
+		}
+	]
+}
