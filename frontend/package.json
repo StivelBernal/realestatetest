@@ -1,0 +1,47 @@
+{
+  "name": "realestatefrontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "docs:build": "typedoc --options typedoc.json",
+    "docs:serve": "npm run docs:build && npx http-server docs -p 3002 -o",
+    "docs:watch": "typedoc --options typedoc.json --watch",
+    "docs:clean": "rm -rf docs",
+    "docs:dev": "concurrently \"npm run dev\" \"npm run docs:watch\"",
+    "docs:quick": "typedoc --options typedoc.json --excludeExternals false --excludePrivate false"
+  },
+  "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
+    "@types/leaflet": "^1.9.21",
+    "axios": "^1.12.2",
+    "clsx": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.65.0",
+    "react-leaflet": "^5.0.0",
+    "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@microsoft/tsdoc-config": "^0.17.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "http-server": "^14.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "typedoc": "^0.28.14",
+    "typescript": "^5"
+  }
+}

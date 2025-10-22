@@ -1,0 +1,43 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Ignore build outputs
+bin/
+obj/
+
+# Rider / VS / VSCode
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Debug/Release folders
+**/Debug/
+**/Release/
+
+# NuGet
+*.nupkg
+packages/
+
+# Runtime files
+*.runtimeconfig.json
+*.deps.json
+
+# Local appsettings (dont commit secrets)
+appsettings.Development.json
+appsettings.Local.json
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Ignore published output
+publish/
+wwwroot/

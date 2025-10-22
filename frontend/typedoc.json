@@ -1,0 +1,45 @@
+{
+  "entryPoints": [
+    "src/components",
+    "src/app/components", 
+    "src/services",
+    "src/utils",
+    "src/types",
+    "src/app/home/page.tsx",
+    "src/app/properties/page.tsx",
+    "src/app/properties/create/page.tsx"
+  ],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "name": "Real Estate Frontend - Documentación de Componentes",
+  "theme": "default",
+  "readme": "COMPONENTS_DOCS.md",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "categorizeByGroup": true,
+  "defaultCategory": "Otros",
+  "categoryOrder": [
+    "Componentes UI",
+    "Componentes Principales", 
+    "Páginas",
+    "Servicios",
+    "Utilidades",
+    "Tipos",
+    "*"
+  ],
+  "sort": ["source-order"],
+  "validation": {
+    "notExported": true,
+    "invalidLink": true,
+    "notDocumented": false
+  },
+  "treatWarningsAsErrors": false,
+  "cleanOutputDir": true,
+  "searchInComments": true,
+  "customCss": "./docs-styles.css",
+  "githubPages": false,
+  "gitRevision": "main",
+  "excludeTags": ["@internal"]
+}

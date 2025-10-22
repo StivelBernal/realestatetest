@@ -1,0 +1,41 @@
+/* Estilos para los marcadores de precio en el mapa */
+.custom-price-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.price-bubble {
+  background: #3B82F6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.price-bubble:hover {
+  transform: scale(1.05);
+  background: #2563EB;
+}
+
+/* Estilos para el popup de la propiedad */
+.property-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.property-popup .leaflet-popup-content {
+  margin: 0;
+  width: auto !important;
+}
+
+.property-popup .leaflet-popup-close-button {
+  color: white;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
