@@ -58,10 +58,10 @@ builder.Services.AddCors(options =>
                             "https://realestatetest-inky.vercel.app" // Producción en Vercel
                         )
                         .AllowAnyHeader()
-                        .AllowAnyMethod());
+                        .AllowAnyMethod()
+                        .AllowCredentials());
 });
 builder.Services.AddControllers();
-builder.Services.AddSingleton<RealEstate.Api.Services.S3Service>();
 
 
 var app = builder.Build();
@@ -77,7 +77,7 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
 
-// Health check endpoint para Railway
+// Simple health endpoints
 app.MapGet("/", () => "API is running! 🚀");
 app.MapGet("/health", () => "Healthy");
 
