@@ -23,6 +23,24 @@ builder.Services.AddSingleton<IMongoDatabase>(sp =>
     var databaseName = Environment.GetEnvironmentVariable("MongoDbSettings__DatabaseName")
                       ?? configuration["MongoDbSettings:DatabaseName"];
 
+    // Log de diagnóstico
+    Console.WriteLine($"=== MONGODB DIAGNOSTICS ===");
+    Console.WriteLine($"ConnectionString from ENV: {!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MongoDbSettings__ConnectionString"))}");
+    Console.WriteLine($"DatabaseName from ENV: {!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("MongoDbSettings__DatabaseName"))}");
+    Console.WriteLine($"Final ConnectionString exists: {!string.IsNullOrEmpty(connectionString)}");
+    Console.WriteLine($"Final DatabaseName: {databaseName}");
+    Console.WriteLine($"=== END DIAGNOSTICS ===");
+
+    if (string.IsNullOrEmpty(connectionString))
+    {
+        throw new InvalidOperationException("MongoDB connection string is not configured");
+    }
+
+    if (string.IsNullOrEmpty(databaseName))
+    {
+        throw new InvalidOperationException("MongoDB database name is not configured");
+    }
+
     var client = new MongoClient(connectionString);
     return client.GetDatabase(databaseName);
 });
