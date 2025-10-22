@@ -15,12 +15,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out .
 
-# Configurar variables de entorno para Railway
-ENV ASPNETCORE_URLS=http://0.0.0.0:$PORT
+# Railway uses the PORT environment variable
+ENV ASPNETCORE_URLS=http://0.0.0.0:${PORT:-8080}
 ENV ASPNETCORE_ENVIRONMENT=Production
 
-# Exponer el puerto
-EXPOSE $PORT
-
 # Comando para ejecutar la aplicación
-ENTRYPOINT ["dotnet", "RealEstate.Api.dll"]
+CMD ["dotnet", "RealEstate.Api.dll"]
