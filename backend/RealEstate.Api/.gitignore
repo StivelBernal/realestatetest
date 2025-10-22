@@ -3,6 +3,9 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+appsettings.json
+appsettings.*.json
+
 
 # Ignore build outputs
 bin/
