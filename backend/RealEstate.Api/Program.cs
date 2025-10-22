@@ -31,7 +31,10 @@ builder.Services.AddSingleton<RealEstate.Api.Services.S3Service>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.WithOrigins("http://localhost:3000")
+        policy => policy.WithOrigins(
+                            "http://localhost:3000", // Desarrollo local
+                            "https://realestatetest-inky.vercel.app" // Producción en Vercel
+                        )
                         .AllowAnyHeader()
                         .AllowAnyMethod());
 });

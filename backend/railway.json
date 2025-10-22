@@ -1,0 +1,11 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "buildCommand": "docker build -t realestate-api ."
+  },
+  "deploy": {
+    "startCommand": "dotnet RealEstate.Api.dll",
+    "healthcheckPath": "/",
+    "restartPolicyType": "ON_FAILURE"
+  }
+}
