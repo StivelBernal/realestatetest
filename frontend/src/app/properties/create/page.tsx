@@ -8,6 +8,11 @@ import propertyService from '@/services/propertyService';
 import { CreatePropertyFormData } from '@/types/property';
 import { useLoader } from './../../../contexts';
 
+
+const latRegex = /^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-8]?\d(?:\.\d{1,6})?))$/;
+const lngRegex = /^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:1?[0-7]?\d(?:\.\d{1,6})?))$/;
+
+
 /**
  * Página de creación de propiedades (CreatePropertyPage).
  * 
@@ -20,11 +25,6 @@ import { useLoader } from './../../../contexts';
  * - Carga de imagen principal y galería
  * - Manejo de estados de carga y errores
  * - Redirección automática tras éxito
- * 
- * @example
- * Ruta: `/properties/create`
- * Accesible desde el header o botones CTA.
- * 
  * @returns Elemento JSX de la página de creación
  */
 export default function CreatePropertyPage() {
@@ -164,7 +164,10 @@ export default function CreatePropertyPage() {
                   placeholder="Ej: 4.570868"
                   registration={register('lat', {
                     required: 'La latitud es obligatoria',
-                    valueAsNumber: true
+                    pattern: {
+                      value: latRegex,
+                      message: "Latitud inválida"
+                    }
                   })}
                   error={errors.lat?.message}
                 />
@@ -176,7 +179,10 @@ export default function CreatePropertyPage() {
                   placeholder="Ej: -74.297333"
                   registration={register('lng', {
                     required: 'La longitud es obligatoria',
-                    valueAsNumber: true
+                    pattern: {
+                      value: lngRegex,
+                      message: "Longitud inválida"
+                    }
                   })}
                   error={errors.lng?.message}
                 />
@@ -209,7 +215,7 @@ export default function CreatePropertyPage() {
             </div>
 
             {/* Botones de acción */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex justify-center flex-col sm:flex-row gap-4 pt-6">
               <Button
                 type="button"
                 variant="primary"

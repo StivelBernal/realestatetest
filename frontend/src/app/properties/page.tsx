@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react';
 import FilterForm from '../../components/property/FilterForm';
 import PropertyCard from '../../components/property/PropertyCard';
 import PropertiesMap from '../../components/map/PropertiesMap';
-import { ViewToggle, LoadingSpinner, EmptyState } from '../components/ui';
 import { useLoader } from './../../contexts';
 import { Property, PropertyFilters } from './../../types/property';
 import propertyService from './../../services/propertyService';
+import EmptyState from '@/components/ui/EmptyState';
+import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import ViewToggle from '@/components/ui/ViewToggle';
 
 /**
  * Página de listado de propiedades (PropertiesPage).

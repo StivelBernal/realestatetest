@@ -1,0 +1,44 @@
+
+/* Estilos personalizados para la galería SplideJS */
+.property-gallery {
+    .splide__pagination {
+      bottom: 1rem;
+    }
+    .splide__pagination__page {
+      background: rgba(255, 255, 255, 0.5);
+      border: 2px solid white;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      &.is-active {
+        background: #1d4ed8;
+        border-color: #1d4ed8;
+      }
+    }
+    .splide__arrow {
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 1;
+      }
+      svg {
+        fill: white;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    .splide__arrow--prev {
+      left: 1rem;
+    }
+    
+    .splide__arrow--next {
+      right: 1rem;
+    }
+}
+

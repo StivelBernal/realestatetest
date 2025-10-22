@@ -1,4 +1,5 @@
 @use './map.scss';
+@use './property/properfyGallery';
 
 // 🎨 Variables y estilos base
 $primary-color: #2563eb;
@@ -13,28 +14,10 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-
-/* Asegurar fondos blancos */
-body, html, #__next, main {
-  background-color: #ffffff !important;
-  color: #171717 !important;
-}
-
-/* Forzar inputs y forms al modo claro */
-input, textarea, select, button {
-  background-color: #ffffff !important;
-  color: #171717 !important;
-  border-color: #d1d5db !important;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #6b7280 !important;
-}
-
 /* Estilos para los marcadores de precio en el mapa */
 .custom-price-marker {
-  background: transparent !important;
-  border: none !important;
+  background: transparent;
+  border: none;
 }
 
 .price-bubble {
@@ -61,50 +44,4 @@ input::placeholder, textarea::placeholder {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 6px solid #1d4ed8;
-}
-
-/* Estilos personalizados para la galería SplideJS */
-.property-gallery .splide__pagination {
-  bottom: 1rem;
-}
-
-.property-gallery .splide__pagination__page {
-  background: rgba(255, 255, 255, 0.5);
-  border: 2px solid white;
-  width: 12px;
-  height: 12px;
-  margin: 0 4px;
-}
-
-.property-gallery .splide__pagination__page.is-active {
-  background: #1d4ed8;
-  border-color: #1d4ed8;
-}
-
-.property-gallery .splide__arrow {
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.property-gallery .splide__arrow:hover {
-  opacity: 1;
-}
-
-.property-gallery .splide__arrow svg {
-  fill: white;
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.property-gallery .splide__arrow--prev {
-  left: 1rem;
-}
-
-.property-gallery .splide__arrow--next {
-  right: 1rem;
 }
