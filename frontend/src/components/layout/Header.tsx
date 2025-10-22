@@ -1,5 +1,7 @@
+'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 /**
  * Componente Header de navegación principal de la aplicación.
@@ -13,9 +15,16 @@ import Link from 'next/link';
  * @returns Elemento JSX del header con navegación
  */
 export const Header = () => {
+
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
+
   return (
     <header className="bg-gray-100 text-gray-800 shadow-lg">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <Link href="/home" className="flex items-center space-x-2">
@@ -50,7 +59,7 @@ export const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-gray-700 hover:text-gray-900">
+          <button className="md:hidden text-gray-700 hover:text-gray-900" onClick={toggleMenu}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -58,7 +67,7 @@ export const Header = () => {
         </div>
 
         {/* Mobile Menu (hidden by default, you can add state management for toggle) */}
-        <div className="md:hidden border-t border-gray-300">
+        <div className={`menu-mobile md:hidden border-t border-gray-300 ${showMenu ? 'show-menu' : ''}`}>
           <div className="py-4 space-y-2">
             <Link 
               href="/home" 

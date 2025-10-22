@@ -16,6 +16,20 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
+.menu-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  display: none;
+  z-index: 10;
+  &.show-menu {
+    display: block;
+  }
+}
+
 /* Estilos para los marcadores de precio en el mapa */
 .custom-price-marker {
   background: transparent;
