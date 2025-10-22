@@ -54,5 +54,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");
+
+// Health check endpoint para Railway
+app.MapGet("/", () => "API is running! 🚀");
+app.MapGet("/health", () => "Healthy");
+
 app.MapControllers();
 app.Run();
