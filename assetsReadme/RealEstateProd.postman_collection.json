@@ -18,11 +18,11 @@
 			},
 			"response": [
 				{
-					"name": "http://localhost:5000/api/properties Copy",
+					"name": "http://localhost:8080/api/properties Copy",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:5000/api/properties"
+						"url": "http://localhost:8080/api/properties"
 					},
 					"status": "OK",
 					"code": 200,
@@ -62,11 +62,11 @@
 			},
 			"response": [
 				{
-					"name": "http://localhost:5000/api/properties Copy",
+					"name": "http://localhost:8080/api/properties Copy",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:5000/api/properties"
+						"url": "http://localhost:8080/api/properties"
 					},
 					"status": "OK",
 					"code": 200,
@@ -115,7 +115,7 @@
 			},
 			"response": [
 				{
-					"name": "http://localhost:5000/api/properties Copy 2",
+					"name": "http://localhost:8080/api/properties Copy 2",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -128,7 +128,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/owners"
+						"url": "http://localhost:8080/api/owners"
 					},
 					"status": "Created",
 					"code": 201,
@@ -148,7 +148,7 @@
 						},
 						{
 							"key": "Location",
-							"value": "http://localhost:5000/api/Owners/68f7053f0f083623b4ed7d87"
+							"value": "http://localhost:8080/api/Owners/68f7053f0f083623b4ed7d87"
 						},
 						{
 							"key": "Transfer-Encoding",
@@ -181,7 +181,7 @@
 			},
 			"response": [
 				{
-					"name": "http://localhost:5000/api/properties Copy 3",
+					"name": "http://localhost:8080/api/properties Copy 3",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -194,7 +194,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/properties"
+						"url": "http://localhost:8080/api/properties"
 					},
 					"status": "Created",
 					"code": 201,
@@ -214,7 +214,7 @@
 						},
 						{
 							"key": "Location",
-							"value": "http://localhost:5000/api/Properties/68f705450f083623b4ed7d88"
+							"value": "http://localhost:8080/api/Properties/68f705450f083623b4ed7d88"
 						},
 						{
 							"key": "Transfer-Encoding",
